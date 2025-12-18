@@ -1,0 +1,57 @@
+@import "tailwindcss";
+/* index.css */
+
+
+/* Custom keyframes for a blob-like floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Utility class to apply the floating animation */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Fade-in from bottom keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utility class for fade-in-up */
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Custom Scrollbar for the Chat Messages Area */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #7b61ff, #d96ad9); /* Gradient thumb */
+  border-radius: 4px; /* Rounded corners for the thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #d96ad9, #7b61ff); /* Hover effect */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #2d2d2d; /* Track color */
+  border-radius: 4px; /* Rounded corners for the track */
+}
